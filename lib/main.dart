@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:first_app/pages/home.dart';
+import 'package:first_app/pages/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,6 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.light,
             primarySwatch: Colors.deepOrange,
             accentColor: Colors.deepPurple),
-        home: HomePage());
+        home: AuthPage());
   }
 }
