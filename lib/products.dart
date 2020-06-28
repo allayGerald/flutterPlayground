@@ -1,4 +1,5 @@
 import 'package:first_app/pages/product.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
@@ -13,9 +14,30 @@ class Products extends StatelessWidget {
           Image.asset(products[index]['image']),
           Container(
             padding: EdgeInsets.only(top: 10),
-            child: Text(
-              products[index]['title'],
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, fontFamily: 'Oswald'),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  products[index]['title'],
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Oswald'),
+                ),
+                SizedBox(
+                  width: 9,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 2.5, horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).accentColor,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text(
+                    '${products[index]['price'].toString()} TZS',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ),
           ButtonBar(
