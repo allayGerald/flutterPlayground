@@ -35,7 +35,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
             decoration: InputDecoration(labelText: 'Product Price'),
             keyboardType: TextInputType.number,
             onChanged: (String value) {
-              _price = value as double;
+              _price = double.parse(value);
             },
           ),
           TextField(
@@ -47,7 +47,9 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
               });
             },
           ),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           RaisedButton(
             child: Text('Save'),
             color: Theme.of(context).accentColor,
