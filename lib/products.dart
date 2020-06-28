@@ -40,6 +40,13 @@ class Products extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2.5),
+            child: Text('Mwenge, Dar-Es-Salaam'),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(color: Colors.grey, width: 0.5)),
+          ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
