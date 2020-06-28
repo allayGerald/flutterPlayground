@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../product_manager.dart';
 
 class ProductsPage extends StatelessWidget {
-   List<Map<String, dynamic>> products;
+  final List<Map<String, dynamic>> products;
 
   ProductsPage(this.products);
 
@@ -18,6 +18,7 @@ class ProductsPage extends StatelessWidget {
               title: Text('Choose'),
             ),
             ListTile(
+              leading: Icon(Icons.edit),
               title: Text('Manage products'),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/admin');
@@ -28,6 +29,9 @@ class ProductsPage extends StatelessWidget {
       ),
       appBar: AppBar(
         title: Text('My First App'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.favorite), onPressed: null)
+        ],
       ),
       body: ProductsManager(products),
     );

@@ -22,6 +22,7 @@ class ProductsAdminPage extends StatelessWidget {
                     title: Text('Choose'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.shopping_basket),
                     title: Text('All products'),
                     onTap: () {
                       Navigator.pushReplacementNamed(context, '/');
@@ -46,7 +47,10 @@ class ProductsAdminPage extends StatelessWidget {
               ),
             ),
             body: TabBarView(
-              children: <Widget>[ProductCreatePage(addProduct), ProductListPage()],
+              children: <Widget>[
+                ProductCreatePage(addProduct),
+                ProductListPage()
+              ],
             )));
   }
 }
